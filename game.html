@@ -18,6 +18,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-family: Arial, sans-serif;
         }
 
         canvas {
@@ -28,21 +31,30 @@
             image-rendering: pixelated;
             background: #000;
         }
+
+        #status {
+            margin-top: 10px;
+            color: #aaa;
+        }
     </style>
 </head>
 
 <body>
 
-<canvas id="canvas"></canvas>
+    <canvas id="canvas" width="640" height="480"></canvas>
 
-<script>
-    const canvas = document.getElementById("canvas");
+    <div id="status">emulador preparando...</div>
 
-    canvas.width = 640;
-    canvas.height = 480;
+    <script>
+        const canvas = document.getElementById("canvas");
+        const status = document.getElementById("status");
 
-    console.log("canvas PC-98 preparado");
-</script>
+        console.log("canvas preparado");
+
+        setTimeout(() => {
+            status.textContent = "canvas funcionando 👍";
+        }, 1000);
+    </script>
 
 </body>
 </html>
