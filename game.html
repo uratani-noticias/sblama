@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>touhou 4</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas {
+            width: 640px;
+            height: 480px;
+            max-width: 100vw;
+            max-height: 100vh;
+            image-rendering: pixelated;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+    const canvas = document.getElementById("canvas");
+
+    canvas.width = 640;
+    canvas.height = 480;
+
+    console.log("canvas PC-98 preparado");
+</script>
+
+</body>
+</html>
